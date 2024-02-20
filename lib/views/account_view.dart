@@ -22,11 +22,11 @@ class _AccountViewState extends State<AccountView> {
     final allItems = items.map((e) => CircleAvatar(
       backgroundImage: AssetImage(e),
     )).toList().asMap().map((key, item){
-      const left= 28;
+      final left= getSize(28);
       final value= Container(
         margin: EdgeInsets.only(left: (left*key).toDouble()),
-        width: 42,
-        height: 42,
+        width: getSize(42),
+        height:getSize(42),
         decoration: const ShapeDecoration(
 
           shape: OvalBorder(
@@ -69,7 +69,7 @@ class _AccountViewState extends State<AccountView> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Gap(12),
+              const Gap(8),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -77,7 +77,7 @@ class _AccountViewState extends State<AccountView> {
                     "assets/img/Group 18923.png",
                     width: getSize(100),
                   ),
-                  const Gap(24),
+                  const Gap(8),
                   const Expanded(
                       child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -97,7 +97,7 @@ class _AccountViewState extends State<AccountView> {
                       ),
                     ],
                   )),
-                  const Gap(24)
+
                 ],
               ),
               const Gap(8),
@@ -157,7 +157,7 @@ class _AccountViewState extends State<AccountView> {
                                     fontWeight: FontWeight.bold,
                                   )),
                           TextSpan(
-                              text: " Shreya, Riya ",
+                              text: " Shreya,\n Riya ",
                               style: TextStyle(
                                 color: Pallete.secondary,
                                 fontSize: getFontSize(16),
@@ -266,7 +266,7 @@ class _AccountViewState extends State<AccountView> {
                   ),),
                 ],
               ),
-              const Gap(16),
+              const Gap(8),
               const Divider(),
               const Gap(16),
               Row(
@@ -425,7 +425,7 @@ class ProfilContentItem extends StatelessWidget {
           style: TextStyle(
             color: Pallete.secondary,
             fontSize: getFontSize(20),
-            fontFamily: 'Josefin Sans',
+           // fontFamily: 'Josefin Sans',
             fontWeight: FontWeight.bold,
           ),
         ),

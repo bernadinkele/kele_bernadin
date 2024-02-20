@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kele_bernadin/App/app_config.dart';
-import 'package:kele_bernadin/views/account_view.dart';
+import 'package:kele_bernadin/views/home_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     AppConfig.init(context);
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AccountView(),
+      home: HomeView(),
     );
   }
 }
